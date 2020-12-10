@@ -10,3 +10,5 @@ Currently displays:
 - Host
 
 - Distro
+
+- Uptime
