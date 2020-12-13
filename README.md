@@ -1,5 +1,5 @@
 # sCnfetch
-sCnfetch (Shity C NeoFETCH)
+sCnfetch (Shity C NeoFETCH Clone)
 
 Linux only
 
