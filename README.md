@@ -12,3 +12,5 @@ Currently displays:
 - Distro
 
 - Uptime
+
+- Shell
