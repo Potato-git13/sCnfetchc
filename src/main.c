@@ -5,6 +5,7 @@
 
 extern const char* whoami();
 extern const char* getDistro();
+extern const char* getShell();
 
 int main(){
 	char hostBuffer[256];
@@ -25,6 +26,7 @@ int main(){
 	printf("Host   : %s\n", hostBuffer);
 	printf("Distro : %s\n", getDistro());
 	printf("Uptime : %dh, %dm\n", hour, min);
+	printf("Shell  : %s\n", getShell());
 	printf("\n");
 	return 0;
 }

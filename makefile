@@ -1,9 +1,9 @@
 CFLAGS=-g -Wall -Wextra -pedantic -Wformat=2
 
 # Compiles and makes bin if needed
-c: src/main.c src/whoami.c src/getDistro.c
+c: src/main.c src/whoami.c src/getdistro.c src/getshell.c
 	mkdir -p bin
-	$(CC) -o bin/scnfetchc src/main.c src/whoami.c src/getDistro.c -lm $(CFLAGS)
+	$(CC) -o bin/scnfetchc src/main.c src/whoami.c src/getdistro.c src/getshell.c -lm $(CFLAGS)
 
 # run
 r:
