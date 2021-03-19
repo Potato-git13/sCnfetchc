@@ -14,3 +14,6 @@ Currently displays:
 - Uptime
 
 - Shell
+
+
+It also has a changable icon
