@@ -1,4 +1,4 @@
-CFLAGS=-g -Wall -Wextra -pedantic -Wformat=2
+CFLAGS=-g -Wall -Wextra -pedantic -Wformat=2 -Wextra
 
 # Compiles and makes bin if needed
 c: src/main.c src/whoami.c src/getdistro.c src/getshell.c src/gethost.c
