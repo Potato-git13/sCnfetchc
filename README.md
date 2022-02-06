@@ -15,5 +15,3 @@ Currently displays:
 
 - Shell
 
-
-It also has a changable icon
