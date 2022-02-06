@@ -14,4 +14,3 @@ Currently displays:
 - Uptime
 
 - Shell
-
