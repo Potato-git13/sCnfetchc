@@ -13,7 +13,7 @@ int main(){
 	struct sysinfo sysinfostruct;
     int min;
     int hour;
-	
+
 	if(! sysinfo (&sysinfostruct)){
         min = (sysinfostruct.uptime / 60) % 60;
         hour = sysinfostruct.uptime / 60 / 60;
@@ -23,6 +23,5 @@ int main(){
 	printf("Distro : %s\n", getDistro());
 	printf("Uptime : %dh, %dm\n", hour, min);
 	printf("Shell  : %s\n", getShell());
-	printf("\n");
 	return 0;
 }
