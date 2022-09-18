@@ -1,28 +1,26 @@
-CFLAGS=-g -Wall -Wextra -pedantic -Wformat=2 -Wextra
+CFLAGS=-Wall -Wextra -Wpedantic
+CC=gcc
 
-# Compiles and makes bin if needed
-c: src/main.c src/whoami.c src/getdistro.c src/getshell.c src/gethost.c
-	mkdir -p bin
-	$(CC) -o bin/scnfetchc src/main.c src/whoami.c src/getdistro.c src/getshell.c src/gethost.c -lm $(CFLAGS)
+FILES=src/*.c
+OUTDIR=bin
+OUTNAME=$(OUTDIR)/scnfetchc
 
-# run
-r:
-	bin/scnfetchc
+clean:
+	rm $(OUTNAME)
+	rmdir $(OUTDIR)
 
-# compile and run
-cr: c r
+compile:
+	mkdir -p $(OUTDIR)
+	$(CC) -o $(OUTNAME) $(FILES) -lm $(CFLAGS)
 
-# run with a debugger
-rd: c
-	gdb bin/scnfetchc
+compile-debug: CFLAGS += -g
+compile-debug: compile
 
-# compile and run with a debugger
-crd: c rd
+run:
+	$(OUTNAME)
 
-clear:
-	rm bin/scnfetchc
-	rmdir bin
+install:
+	sudo cp -p $(OUTNAME) /bin/scnfetchc
 
-# Tell makefile that those arguments aren't files
-.PHONY: c r cr rd crd
-
+uninstall:
+	sudo rm /bin/scnfetchc

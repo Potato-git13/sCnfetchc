@@ -1,8 +1,9 @@
 #include <stdlib.h>
 #include <string.h>
+
 #define BUFFER_SIZE 150
 
-const char* getShell() {
+const char* getShell(){
     char *shell = malloc(BUFFER_SIZE);
     char *shellpath = getenv("SHELL");
     char *shellname = strrchr(getenv("SHELL"), '/');
